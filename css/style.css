@@ -1,0 +1,21 @@
+.banner-perfil {
+    height: 15em;
+    background-position: center;
+    background-image: url("../img/banner/banner-perfil.jpg") !important;
+}
+
+.image-perfil {
+    height: 12em;
+    width: 12em;
+    position: relative;
+    top: 7em;
+    /* right: -2em; */
+    border-radius: 100%;
+    border: 0.5em solid white;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../img/perfil/perfil-1.jpg") !important;
+}
+.navbar {
+    z-index: 9999;
+}
