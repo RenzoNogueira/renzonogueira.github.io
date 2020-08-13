@@ -1,3 +1,9 @@
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: none;
+}
+
 .banner-perfil {
     height: 15em;
     background-position: center;
@@ -9,13 +15,21 @@
     width: 12em;
     position: relative;
     top: 7em;
-    /* right: -2em; */
     border-radius: 100%;
     border: 0.5em solid white;
     background-position: center;
     background-size: contain;
     background-image: url("../img/perfil/perfil-1.jpg") !important;
 }
+
 .navbar {
     z-index: 9999;
+}
+
+.img-projects {
+    width: 18em;
+}
+
+.toast {
+    position: fixed;
 }
