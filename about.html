@@ -3,17 +3,19 @@
 
 <head>
     <title>Renzo Nogueira</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Style -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+    <!-- Cabeçalho -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -23,7 +25,7 @@
                 </span>
             </button>
             <div class="collapse navbar-collapse bg-dark" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="index.html"><b>Renzo Nogueira</b></a>
+                <a title="Renzo Nogueira" class="navbar-brand" href="index.html"><b>Renzo Nogueira</b></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Ir para principal <span
@@ -42,12 +44,115 @@
             </div>
         </nav>
     </header>
+
+    <!-- Conteúdo -->
     <main>
-        <h3>Meu site pessoal para portfólio</h3>
+        <!-- Banner e Perfil -->
+        <div class="banner-perfil bg-light mb-5">
+            <div class="row">
+                <div class="col d-sm-block d-md-none"></div>
+                <div class="col-md-4">
+                    <div class="col image-perfil bg-light mx-auto"></div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="sub-header"></div>
+
+        <div class="content p-4">
+
+            <!-- Sobre -->
+            <div class="mb-4 mt-4">
+                <h3 class="ml-5"><a href="#main-projects" class="text-info">Sobre #</a></h3>
+                <hr>
+                <div id="sobre" class="sobre">
+
+                </div>
+            </div>
+
+            <!-- Contatos -->
+            <div class="mb-4">
+                <h3 class="ml-5"><a href="#contatos" class="text-info">Contatos #</a></h3>
+                <hr>
+                <div class="row" id="contatos">
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/social_networks/facebook-icon.png"
+                                alt="Facebook">
+                            <p class="card-text">Facebook</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/social_networks/instagram-icon.png"
+                                alt="Instagram">
+                            <p class="card-text">Instagram</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/social_networks/linkedin-icon.png"
+                                alt="Linkedin">
+                            <p class="card-text">Linkedin</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/social_networks/github-icon.png"
+                                alt="Github">
+                            <p class="card-text">Github</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/social_networks/sololearn-icon.png"
+                                alt="Sololearn">
+                            <p class="card-text">Sololearn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <h3 class="ml-5"><a href="#email" class="text-info">E-mail #</a></h3>
+                <hr>
+                <div id="email" class="container">
+                    <form action="javascript:sendEmail();">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Seu nome</label>
+                            <div class="col-sm-6">
+                                <input id="name" minlength="6" maxlength="30" type="text" class="form-control"
+                                    id="inputEmail3" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Assunto</label>
+                            <div class="col-sm-6">
+                                <input id="subject" type="text" minlength="8" maxlength="60" class="form-control"
+                                    id="inputEmail3" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Sua menssagem</label>
+                            <div class="col-sm-6">
+                                <textarea id="message" minlength="80" style="min-height: 3em; max-height: 8em;"
+                                    class="form-control" name="" id="" required></textarea>
+                                <!-- <input type="email" class="form-control" id="inputEmail3"> -->
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light p-3">
+        <h5>@2020 Renzo Nogueira</h5>
+        <p>Copyright (C) 2007 Free Software Foundation</p>
+    </footer>
+
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
-    <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="frameworks/bootstrap/js/bootstrap.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 

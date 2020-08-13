@@ -7,3 +7,11 @@ window.onload = _ => {
         })
     }
 }
+
+function sendEmail() {
+    name = document.querySelector("#name").value
+    subject = document.querySelector("#subject").value
+    message = document.querySelector("#message").value
+
+    window.location.href = `mailto:nogueirarenzoso@gmail.com?subject=${subject}&body=${message}`
+}

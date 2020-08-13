@@ -18,14 +18,14 @@
     <!-- Cabeçalho -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            <button title="Menu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="material-icons">
                     menu
                 </span>
             </button>
             <div class="collapse navbar-collapse bg-dark" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="index.html"><b>Renzo Nogueira</b></a>
+                <a title="Renzo Nogueira" class="navbar-brand" href="index.html"><b>Renzo Nogueira</b></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Ir para principal <span
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col d-sm-block d-md-none"></div>
                 <div class="col-md-4">
-                    <div class="col image-perfil bg-light mx-auto"></div>
+                    <div title="Renzo" class="col image-perfil bg-light mx-auto"></div>
                 </div>
                 <div class="col"></div>
             </div>
@@ -60,7 +60,7 @@
         <div class="sub-header"></div>
 
         <div class="content p-4">
-            <blockquote class="text-right blockquote p-4">
+            <blockquote class="text-right blockquote p-4 d-none d-md-block">
                 <p class="mb-2">
                     Amarás ao próximo com a mesma intensidade que tu és amado pelo mesmo, e não deixar que este mesmo te
                     julgue pelo que tu és, por que diferentemente dele só você sabe ser você mesmo.
@@ -68,57 +68,157 @@
                 <footer class="blockquote-footer">Renzo Nogueira</footer>
             </blockquote>
 
-            <h3>Principais projetos</h3>
-
-            <div class="main-projects row">
-                <div class="col m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/github.svg" class="card-img-top img-projects" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">PHP Native Image Compressor</h5>
-                            <p class="card-text">Uma maneira simples de compactar imagens em seu servidor e economizar
-                                espaço. Feito em php puro. Não requer dependências.</p>
-                            <a href="https://renzonogueira.github.io/php-native-image-compressor/" target="_blank"
-                                class="btn btn-danger go_to">Visualizar</a>
-                            <a href="https://github.com/RenzoNogueira/php-native-image-compressor" target="_blank"
-                                class="btn btn-primary go_to">Ir até</a>
+            <!-- Projetos -->
+            <div class="mb-4">
+                <h3 class="ml-5"><a href="#main-projects" class="text-info">Principais projetos #</a></h3>
+                <hr>
+                <div id="main-projects" class="main-projects row">
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP Native Image Compressor</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false"
+                                        aria-controls="collapse-1">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-1">
+                                    <div class="card card-body">
+                                        Uma maneira simples de compactar imagens em seu servidor e
+                                        economizar
+                                        espaço. Feito em php puro. Não requer dependências.
+                                    </div>
+                                </div>
+                                <a href="https://renzonogueira.github.io/php-native-image-compressor/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/php-native-image-compressor" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/github.svg" class="card-img-top img-projects" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Window Debug JS</h5>
-                            <p class="card-text">Uma janela que exibe as mensagens do console diretamente no corpo do
-                                seu site. Útil para
-                                debug.</p>
-                            <a href="https://renzonogueira.github.io/Window-Debug-JS/" target="_blank"
-                                class="btn btn-danger go_to">Visualizar</a>
-                            <a href="https://github.com/RenzoNogueira/Window-Debug-JS" target="_blank"
-                                class="btn btn-primary go_to">Ir até</a>
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            <div class="card-body">
+                                <h5 class="card-title">Window Debug JS</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false"
+                                        aria-controls="collapse-2">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-2">
+                                    <div class="card card-body">
+                                        Uma janela que exibe as mensagens do console diretamente no corpo
+                                        do
+                                        seu site. Útil para
+                                        debug.
+                                    </div>
+                                </div>
+                                <a href="https://renzonogueira.github.io/Window-Debug-JS/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/Window-Debug-JS" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/github.svg" class="card-img-top img-projects" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Buttons Social networks</h5>
-                            <p class="card-text">Lindos botôes de rede social em puro CSS.</p>
-                            <a href="https://renzonogueira.github.io/Buttons-Social-networks/" target="_blank"
-                                class="btn btn-danger go_to">Visualizar</a>
-                            <a href="https://github.com/RenzoNogueira/Buttons-Social-networks" target="_blank"
-                                class="btn btn-primary go_to">Ir até</a>
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Buttons Social networks</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false"
+                                        aria-controls="collapse-3">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-3">
+                                    <div class="card card-body">
+                                        Lindos botões de rede social em puro CSS.
+                                    </div>
+                                </div>
+                                <a href="https://renzonogueira.github.io/Buttons-Social-networks/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/Buttons-Social-networks" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Conhecimentos -->
+            <div class="mb-4">
+                <h3 class="ml-5"><a href="#conhecimentos" class="text-info">Conhecimentos #</a></h3>
+                <hr>
+                <h4 class="ml-5 text-secondary">Linguagens</h4>
+                <div class="row" id="conhecimentos">
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/html-icon.png" alt="Html">
+                            <p class="card-text">Html</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/css-icon.png" alt="CSS">
+                            <p class="card-text">CSS</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/js-icon.png" alt="Javascript">
+                            <p class="card-text">Javascript</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/java-icon.png" alt="Java">
+                            <p class="card-text">Java</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/php-icon.png" alt="PHP">
+                            <p class="card-text">PHP</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/sql-icon.png" alt="SQL">
+                            <p class="card-text">SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="ml-5 text-secondary">Frameworks</h4>
+                <div class="row">
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/vue-icon.png" alt="Vue JS">
+                            <p class="card-text">Vue JS</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/materialize-icon.png" alt="Materialize">
+                            <p class="card-text">Materialize</p>
+                        </div>
+                    </div>
+                    <div class="col-sm card conhecimentos text-center">
+                        <div class="card-body"><img class="rounded" src="img/technologies/jquery-icon.png" alt="Jaquery">
+                            <p class="card-text">Jaquery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formação -->
+            <div>
+                <h3 class="ml-5"><a href="#formacao" class="text-info">Formação #</a></h3>
+                <hr>
+                <div id="formacao"></div>
+            </div>
         </div>
 
         <!-- Toats -->
-        <div aria-live="polite" aria-atomic="true" style="position: absolute; top: 3em; right: 20em; min-height: 200px; z-index: 9999;">
+        <div aria-live="polite" aria-atomic="true"
+            style="position: absolute; top: 3em; right: 20em; min-height: 200px; z-index: 9999;">
             <div class="toast">
                 <div class="toast-header">
                     <strong class="mr-auto">Hmmm...</strong>
