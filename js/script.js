@@ -1,5 +1,7 @@
 window.onload = _ => {
-    $(".toast").toast({"autohide": false})
+    $(".toast").toast({
+        "autohide": false
+    })
     bottonGoTo = document.querySelectorAll(".go_to")
     for (let i of bottonGoTo) {
         i.addEventListener("click", function () {
@@ -13,5 +15,5 @@ function sendEmail() {
     subject = document.querySelector("#subject").value
     message = document.querySelector("#message").value
 
-    window.location.href = `mailto:nogueirarenzoso@gmail.com?subject=${subject}&body=${message}`
+    window.open(`mailto:nogueirarenzoso@gmail.com?subject=${subject}&body=${message}`, "_blank");
 }
