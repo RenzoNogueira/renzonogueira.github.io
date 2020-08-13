@@ -27,7 +27,7 @@ body {
 }
 
 .img-projects {
-    width: 18em;
+    width: 100% !important;
 }
 
 .toast {
