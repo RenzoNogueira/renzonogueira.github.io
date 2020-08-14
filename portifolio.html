@@ -3,17 +3,19 @@
 
 <head>
     <title>Renzo Nogueira</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Style -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+    <!-- Cabeçalho -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -26,27 +28,186 @@
                 <a title="Renzo Nogueira" class="navbar-brand" href="index.html"><b>Renzo Nogueira</b></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Ir para principal <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Ir para principal <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="portifolio.html">Portifólio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galeria</a>
+                        <a class="nav-link disabled" href="galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Sobre e contato</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect04"
+                            aria-label="Example select with button addon">
+                            <option selected>Categoria - -</option>
+                            <option value="1">Projetos</option>
+                            <option value="2">Outros</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-success ml-2 my-2 my-sm-0" type="submit">Mostrar</button>
+                </form>
             </div>
         </nav>
     </header>
+
+    <!-- Conteúdo -->
     <main>
-        <h3>Meu site pessoal para portfólio</h3>
+        <!-- Banner e Perfil -->
+        <div class="banner-perfil bg-light mb-5 shadow">
+            <div class="row">
+                <div class="col d-sm-block d-md-none"></div>
+                <div class="col-md-4">
+                    <div title="Renzo Nogueira" class="col image-perfil bg-light mx-auto shadow-lg rounded-circle">
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="sub-header"></div>
+
+        <div class="content p-4">
+
+            <!-- Projetos -->
+            <div class="mb-4">
+                <h3 class="ml-5"><a href="#main-projects" class="text-info">Projetos #</a></h3>
+                <hr>
+                <div id="main-projects" class="main-projects row">
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header border-dark">
+                                <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            </div>
+                            <div class="card-body border-dark">
+                                <h5 class="card-title">PHP Native Image Compressor</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false"
+                                        aria-controls="collapse-1">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-1">
+                                    <div class="card card-body">
+                                        Uma maneira simples de compactar imagens em seu servidor e
+                                        economizar
+                                        espaço. Feito em php puro. Não requer dependências.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-dark">
+                                <a href="https://renzonogueira.github.io/php-native-image-compressor/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/php-native-image-compressor" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header border-dark">
+                                <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            </div>
+                            <div class="card-body border-dark">
+                                <h5 class="card-title">Window Debug JS</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false"
+                                        aria-controls="collapse-2">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-2">
+                                    <div class="card card-body">
+                                        Uma janela que exibe as mensagens do console diretamente no corpo
+                                        do
+                                        seu site. Útil para
+                                        debug.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-dark">
+                                <a href="https://renzonogueira.github.io/Window-Debug-JS/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/Window-Debug-JS" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header border-dark">
+                                <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            </div>
+                            <div class="card-body border-dark">
+                                <h5 class="card-title">
+                                    Buttons Social networks</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false"
+                                        aria-controls="collapse-3">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-3">
+                                    <div class="card card-body">
+                                        Lindos botões de rede social em puro CSS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-dark">
+                                <a href="https://renzonogueira.github.io/Buttons-Social-networks/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/Buttons-Social-networks" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header border-dark">
+                                <img src="img/github.svg" class="card-img-top img-projects" alt="Projeto">
+                            </div>
+                            <div class="card-body border-dark">
+                                <h5 class="card-title">
+                                    Credit Card Null Bank</h5>
+                                <p class="card-text">
+                                    <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false"
+                                        aria-controls="collapse-3">
+                                        Detalhes do projeto
+                                    </a>
+                                </p>
+                                <div class="collapse mb-2" id="collapse-3">
+                                    <div class="card card-body">
+                                        Um cartão do NullBank feito com CSS e JS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-dark">
+                                <a href="https://renzonogueira.github.io/Credit-Card-Null-Bank/" target="_blank"
+                                    class="btn btn-danger go_to">Visualizar</a>
+                                <a href="https://github.com/RenzoNogueira/Credit-Card-Null-Bank" target="_blank"
+                                    class="btn btn-primary go_to">Ir até</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light p-3">
+        <h5>@2020 Renzo Nogueira</h5>
+        <p>Copyright (C) 2007 Free Software Foundation</p>
+    </footer>
+
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
-    <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="frameworks/bootstrap/js/bootstrap.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 
