@@ -18,13 +18,13 @@ if ($title = $_POST["title"]) {
     } else {
         insert();
     }
-
-    function insert()
-    {
-        global $DataBase;
-        global $title;
-        $DataBase->executeQuery('INSERT INTO `acessos_paginas`(`titulo`) VALUES ("' . $title . '")');
-    }
 } else {
     echo json_encode($DataBase->executeQuery("SELECT * FROM `acessos_paginas`"));
+}
+
+function insert()
+{
+    global $DataBase;
+    global $title;
+    $DataBase->executeQuery('INSERT INTO `acessos_paginas`(`titulo`) VALUES ("' . $title . '")');
 }
