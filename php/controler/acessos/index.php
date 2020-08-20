@@ -12,7 +12,6 @@ if ($title = $_POST["title"]) {
                 $acessos_atual = $i[2];
                 $sql = 'UPDATE `acessos_paginas` SET `acessos`= "' . ($acessos_atual + 1) . '" WHERE `titulo` = "' . $title . '"';
                 $data = $DataBase->executeQuery($sql);
-                var_dump($sql);
             }
         }
         if (!$achou) insert();
