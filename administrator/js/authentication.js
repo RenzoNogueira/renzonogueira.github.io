@@ -8,3 +8,8 @@ if (localStorage.getItem("authentication")) {
     // alert("Você não está autenticado!")
     window.location.href = "login.html"
 }
+
+document.querySelector("#sair").addEventListener("click", function () {
+    localStorage.removeItem("authentication")
+    window.location.href = "login.html"
+})
