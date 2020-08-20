@@ -1,0 +1,1 @@
+senha db: q8rg)g*gNTT=*X%*
