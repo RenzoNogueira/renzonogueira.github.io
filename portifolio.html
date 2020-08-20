@@ -98,7 +98,7 @@
 
     <!-- Carrrega o portifólio -->
     <script>
-        $.post("http://localhost:8888/controler/portifolio/", {key: "all"})
+        $.post(`${API}/controler/portifolio/`, {key: "all"})
             .done(function (data) {
                 // data = JSON.parse(data)
                 console.log(data)
