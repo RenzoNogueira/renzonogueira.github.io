@@ -1,5 +1,5 @@
 <?php
-$DB = new MySQLi('localhost', 'root', 'root', 'renzonogueiradb');
+$DB = new MySQLi('localhost', 'root', 'root', 'id13562014_geral');
 $DB->query("SET CHARACTER SET utf8");
 // if (!$DB->connect_error) echo "Conectado!";
 
@@ -11,8 +11,10 @@ class DataBase
     {
         global $DB;
         $query = mysqli_query($DB, $query);
-        $result = $query->fetch_all();
-        $query->close();
-        return $result;
+        if (!is_bool($query)) {
+            $result = $query->fetch_all();
+            $query->close();
+            return $result;
+        }
     }
 }

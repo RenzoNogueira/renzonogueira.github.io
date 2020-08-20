@@ -78,7 +78,7 @@
                 <h3 class="ml-5"><a href="#main-projects" class="text-info">Projetos #</a></h3>
                 <hr>
                 <div id="main-projects" class="main-projects row">
-                   <!-- Projetos serão carregados aqui -->
+                    <!-- Projetos serão carregados aqui -->
                 </div>
             </div>
         </div>
@@ -98,7 +98,14 @@
 
     <!-- Carrrega o portifólio -->
     <script>
-        $.post(`${API}/controler/portifolio/`, {key: "all"})
+        // Contabiliza acesso na página
+        $.post(`${API}/controler/acessos/`, {
+            title: "portifolio"
+        })
+
+        $.post(`${API}/controler/portifolio/`, {
+                key: "all"
+            })
             .done(function (data) {
                 // data = JSON.parse(data)
                 console.log(data)
