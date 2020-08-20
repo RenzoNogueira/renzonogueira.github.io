@@ -1,5 +1,6 @@
 <?php
-$DB = new MySQLi('localhost', 'root', 'root', 'id13562014_geral');
+// $DB = new MySQLi('localhost', 'root', 'root', 'id13562014_geral');
+$DB = new MySQLi('localhost', 'id13562014_renzonogueira7', 'JrhETx2X)CWIxXL@', 'id13562014_geral');
 $DB->query("SET CHARACTER SET utf8");
 // if (!$DB->connect_error) echo "Conectado!";
 
