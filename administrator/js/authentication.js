@@ -5,6 +5,6 @@ if (localStorage.getItem("authentication")) {
     data = localStorage.getItem("authentication").split(",")
     // alert(`Seja bem vindo(a) ${data[0]}`)
 } else {
-    alert("Você não está autenticado!")
+    // alert("Você não está autenticado!")
     window.location.href = "login.html"
 }
