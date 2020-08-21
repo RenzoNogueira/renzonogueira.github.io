@@ -36,7 +36,7 @@
                         <a class="nav-link" href="portifolio.html">Portifólio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="galeria.html">Galeria</a>
+                        <a class="nav-link" href="galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Sobre e contato</a>
@@ -241,14 +241,21 @@
     <!-- Carrega os principais projetos -->
     <script>
         // Contabiliza acesso na página
-        $.post(`${API}/controler/acessos/`, {title: "principal"})
+        $.post(`${API}/controler/acessos/`, { title: "principal" })
+
+        $.post(`${API}/controler/imagem_perfil/`, {
+            key: "principais"
+        })
+            .done(function (data) {
+                console.log(data[0][0])
+                $(".image-perfil").css(`background-image`, data[0][0])
+            })
 
         $.post(`${API}/controler/portifolio/`, {
-                key: "principais"
-            })
+            key: "principais"
+        })
             .done(function (data) {
                 // data = JSON.parse(data)
-                console.log(data)
                 const container = document.querySelector("#main-projects")
                 container.innerHTML = ""
                 data.forEach((element, key) => {

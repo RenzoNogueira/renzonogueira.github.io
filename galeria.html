@@ -76,7 +76,12 @@
 
     </main>
 
-    <footer></footer>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light p-3">
+        <h5>@2020 Renzo Nogueira</h5>
+        <p>Copyright (C) 2007 Free Software Foundation</p>
+    </footer>
+    
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     <script src="frameworks/lightbox2-2.11.3/src/js/lightbox.js"></script>
@@ -88,13 +93,11 @@
             title: "galeria"
         })
 
-        $.post(`${API}/controler/galeria/`, {
-                key: "all"
-            })
+        $.post(`${API}/controler/galeria/`, {})
             .done(function (data) {
                 // data = JSON.parse(data)
                 console.log(data)
-                const container = document.querySelector("imagens")
+                const container = document.querySelector("#imagens")
                 container.innerHTML = ""
                 data.forEach((element, key) => {
                     // console.log(element)
@@ -102,13 +105,13 @@
                     div.setAttribute("class", "col-sm")
                     const html = `
                     <div>
-                        <small class="date text-light">${"00/00/0000"}</small>
+                        <small class="date text-light">${new Date(element[3]).toLocaleDateString()}</small>
                     </div>
                     <div>
-                        <a data-lightbox="image-${key}" data-title="${"00/00/0000"}" data-lightbox="my-image" href="${"https://renzonogueira.000webhostapp.com/files/galeria/20200315_151440.jpg"}">
-                            <img  class="border border-dark shadow img-thumbnail img-fluid"
-                            src="${"https://renzonogueira.000webhostapp.com/files/galeria/20200315_151440.jpg"}"
-                            alt="${"00/00/0000"}">
+                        <a data-title="${new Date(element[3]).toLocaleDateString()} - ${element[2]}" data-alt="${new Date(element[3]).toLocaleDateString()}" data-lightbox="image-${key}" data-title="${new Date(element[3]).toLocaleDateString()}" data-lightbox="my-image" href="${element[4]}">
+                            <img title="${element[1]}" class="border border-dark shadow img-thumbnail img-fluid"
+                            src="${element[4]}"
+                            alt="${new Date(element[3]).toLocaleDateString()}">
                         </a>
                     </div>
                     `

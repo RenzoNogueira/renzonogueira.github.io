@@ -1,6 +1,7 @@
 <?php
 
 include "../main.php";
+
 $key = $_POST["key"];
 
 switch ($key) {

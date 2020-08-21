@@ -1,6 +1,7 @@
 <?php
 
 include "../main.php";
+
 $user = $_POST["user"];
 $password = base64_encode($_POST["password"]);
 
