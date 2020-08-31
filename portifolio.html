@@ -17,9 +17,9 @@
 <body>
     <!-- Cabeçalho -->
     <header>
+        <div id="particles-js"></div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="material-icons">
                     menu
                 </span>
@@ -93,6 +93,7 @@
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="frameworks/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="frameworks/particles.js-master/particles.js"></script>
     <script src="js/API.js"></script>
     <script src="js/script.js"></script>
 
@@ -106,7 +107,7 @@
         $.post(`${API}/controler/portifolio/`, {
                 key: "all"
             })
-            .done(function (data) {
+            .done(function(data) {
                 // data = JSON.parse(data)
                 const container = document.querySelector("#main-projects")
                 container.innerHTML = ""
@@ -150,7 +151,7 @@
                     div.setAttribute("class", "col m-3")
                     container.appendChild(div)
                 }
-            }).fail(function (error) {
+            }).fail(function(error) {
                 console.log("Erro na requisição", error)
             });
     </script>

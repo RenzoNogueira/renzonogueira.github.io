@@ -17,10 +17,9 @@
 <body>
     <!-- Cabeçalho -->
     <header>
+        <div id="particles-js"></div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button title="Menu" class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button title="Menu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="material-icons">
                     menu
                 </span>
@@ -64,8 +63,7 @@
         <div class="content p-4">
             <blockquote class="text-lg-left text-lx-left text-md-center text-sm-center blockquote p-4">
                 <p class="mb-2">
-                    Amarás ao próximo com a mesma intensidade que tu és amado pelo mesmo, e não deixar que este mesmo te
-                    julgue pelo que tu és, porque diferentemente dele só você sabe ser você mesmo.
+                    Amarás ao próximo com a mesma intensidade que tu és amado pelo mesmo, e não deixar que este mesmo te julgue pelo que tu és, porque diferentemente dele só você sabe ser você mesmo.
                 </p>
                 <footer class="blockquote-footer">Renzo Nogueira</footer>
             </blockquote>
@@ -124,14 +122,12 @@
                         </div>
                     </div>
                     <div class="col-sm card conhecimentos text-center">
-                        <div class="card-body"><img class="rounded" src="img/technologies/materialize-icon.png"
-                                alt="Materialize">
+                        <div class="card-body"><img class="rounded" src="img/technologies/materialize-icon.png" alt="Materialize">
                             <p class="card-text">Materialize</p>
                         </div>
                     </div>
                     <div class="col-sm card conhecimentos text-center">
-                        <div class="card-body"><img class="rounded" src="img/technologies/jquery-icon.png"
-                                alt="Jaquery">
+                        <div class="card-body"><img class="rounded" src="img/technologies/jquery-icon.png" alt="Jaquery">
                             <p class="card-text">Jaquery</p>
                         </div>
                     </div>
@@ -198,11 +194,8 @@
                             DESDE 08/10/2019 ATÉ 07/05/2020
                         </p>
                         <p>
-                            Atuou como desenvolvedor WEB. Contribuiu no desenvolvimento de um aplicativo de pagamento
-                            digital denominado “Octo pag” (disponível na play store e app store), e seus respectivos
-                            dashboards para administração. Usando as seguintes tecnologias de desenvolvimento: Html,
-                            CSS, Javascript, PHP, Banco de dados Mariadb, Framework Cordova, Framework 7, Framework Vue
-                            JS, Node JS, NPM, Git, Laragon, Github.
+                            Atuou como desenvolvedor WEB. Contribuiu no desenvolvimento de um aplicativo de pagamento digital denominado “Octo pag” (disponível na play store e app store), e seus respectivos dashboards para administração. Usando as seguintes tecnologias de desenvolvimento:
+                            Html, CSS, Javascript, PHP, Banco de dados Mariadb, Framework Cordova, Framework 7, Framework Vue JS, Node JS, NPM, Git, Laragon, Github.
                         </p>
                     </div>
                 </div>
@@ -210,8 +203,7 @@
         </div>
 
         <!-- Toats -->
-        <div aria-live="polite" aria-atomic="true"
-            style="position: absolute; top: 3em; right: 20em; min-height: 200px; z-index: 9999;">
+        <div aria-live="polite" aria-atomic="true" style="position: absolute; top: 3em; right: 20em; min-height: 200px; z-index: 9999;">
             <div class="toast">
                 <div class="toast-header">
                     <strong class="mr-auto">Hmmm...</strong>
@@ -235,26 +227,29 @@
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="frameworks/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="frameworks/particles.js-master/particles.js"></script>
     <script src="js/API.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Carrega os principais projetos -->
     <script>
         // Contabiliza acesso na página
-        $.post(`${API}/controler/acessos/`, { title: "principal" })
+        $.post(`${API}/controler/acessos/`, {
+            title: "principal"
+        })
 
         $.post(`${API}/controler/imagem_perfil/`, {
-            key: "principais"
-        })
-            .done(function (data) {
+                key: "principais"
+            })
+            .done(function(data) {
                 console.log(data[0][0])
                 $(".image-perfil").css(`background-image`, data[0][0])
             })
 
         $.post(`${API}/controler/portifolio/`, {
-            key: "principais"
-        })
-            .done(function (data) {
+                key: "principais"
+            })
+            .done(function(data) {
                 // data = JSON.parse(data)
                 const container = document.querySelector("#main-projects")
                 container.innerHTML = ""
@@ -298,7 +293,7 @@
                     div.setAttribute("class", "col m-3")
                     container.appendChild(div)
                 }
-            }).fail(function (error) {
+            }).fail(function(error) {
                 console.log("Erro na requisição", error)
             });
     </script>

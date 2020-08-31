@@ -17,7 +17,7 @@
             top: 2em;
             left: 1em;
         }
-
+        
         img {
             width: 12em;
         }
@@ -27,9 +27,9 @@
 <body>
 
     <header>
+        <div id="particles-js"></div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="material-icons">
                     menu
                 </span>
@@ -56,6 +56,19 @@
     </header>
 
     <main>
+        <!-- Banner e Perfil -->
+        <div class="banner-perfil bg-light mb-5 shadow">
+            <div class="row">
+                <div class="col d-sm-block d-md-none"></div>
+                <div class="col-md-4">
+                    <div title="Renzo Nogueira" class="col image-perfil bg-light mx-auto shadow-lg rounded-circle">
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="sub-header"></div>
+
         <div class="d-flex justify-content-center">
             <div id="imagens" class="row container p-5">
                 <!-- As imagens serão carregadas aqui -->
@@ -81,10 +94,11 @@
         <h5>@2020 Renzo Nogueira</h5>
         <p>Copyright (C) 2007 Free Software Foundation</p>
     </footer>
-    
+
     <script src="frameworks/jquery/jquery-3.5.1.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     <script src="frameworks/lightbox2-2.11.3/src/js/lightbox.js"></script>
+    <script src="frameworks/particles.js-master/particles.js"></script>
     <script src="js/API.js"></script>
     <script src="js/script.js"></script>
     <script>
@@ -94,7 +108,7 @@
         })
 
         $.post(`${API}/controler/galeria/`, {})
-            .done(function (data) {
+            .done(function(data) {
                 // data = JSON.parse(data)
                 console.log(data)
                 const container = document.querySelector("#imagens")
@@ -118,7 +132,7 @@
                     div.innerHTML = html
                     container.appendChild(div)
                 });
-            }).fail(function (error) {
+            }).fail(function(error) {
                 console.log("Erro na requisição", error)
             });
     </script>
